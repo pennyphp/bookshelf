@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8ebfcb4b7f9f7c467a0973a7a09fd3cc",
+    "hash": "567c9a9ebf60eb9bf857701d5df882f8",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -161,12 +161,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gianarb/penny.git",
-                "reference": "f7e64ac7c2aa296920223b381fc89886ed15eccd"
+                "reference": "211347e36d544554553f8cbb2d521201f4ac0afb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gianarb/penny/zipball/f7e64ac7c2aa296920223b381fc89886ed15eccd",
-                "reference": "f7e64ac7c2aa296920223b381fc89886ed15eccd",
+                "url": "https://api.github.com/repos/gianarb/penny/zipball/211347e36d544554553f8cbb2d521201f4ac0afb",
+                "reference": "211347e36d544554553f8cbb2d521201f4ac0afb",
                 "shasum": ""
             },
             "require": {
@@ -197,7 +197,7 @@
                 }
             ],
             "description": "Another PHP framework make of other components",
-            "time": "2015-07-22 16:15:54"
+            "time": "2015-07-23 08:38:40"
         },
         {
             "name": "guzzle/guzzle",
