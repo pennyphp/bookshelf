@@ -1,6 +1,6 @@
 # Penny Classic Application
 This is a first [penny](https://github.com/gianarb/penny) implementation.
-"Classic" becuase it integrates [league/plates](https://github.com/thephpleague/plates) and help you to build a HTML application.
+"Classic" because it integrates [league/plates](https://github.com/thephpleague/plates) and help you to build a HTML application.
 
 ## Install
 ```
