@@ -1,0 +1,51 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/gianarb/.nvm/v0.10.35/bin/node',
+1 verbose cli   '/home/gianarb/.nvm/v0.10.35/bin/npm',
+1 verbose cli   'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 warn package.json @ No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/home/gianarb/git/milestone-manager-zf',
+6 verbose install   [ 'grunt',
+6 verbose install     'grunt-contrib-clean',
+6 verbose install     'grunt-contrib-copy',
+6 verbose install     'grunt-contrib-watch' ] ]
+7 info preinstall @
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping grunt@~0.4.1 /home/gianarb/git/milestone-manager-zf
+10 verbose already installed skipping grunt-contrib-clean@~0.6.0 /home/gianarb/git/milestone-manager-zf
+11 verbose already installed skipping grunt-contrib-copy@~0.7 /home/gianarb/git/milestone-manager-zf
+12 verbose already installed skipping grunt-contrib-watch@* /home/gianarb/git/milestone-manager-zf
+13 silly resolved []
+14 info build /home/gianarb/git/milestone-manager-zf
+15 verbose linkStuff [ false, false, false, '/home/gianarb/git' ]
+16 info linkStuff @
+17 verbose linkBins @
+18 verbose linkMans @
+19 verbose rebuildBundles @
+20 verbose rebuildBundles [ 'grunt',
+20 verbose rebuildBundles   'grunt-contrib-clean',
+20 verbose rebuildBundles   'grunt-contrib-copy',
+20 verbose rebuildBundles   'grunt-contrib-watch' ]
+21 info install @
+22 info postinstall @
+23 verbose unsafe-perm in lifecycle true
+24 info @ Failed to exec postinstall script
+25 error @ postinstall: `bower install`
+25 error Exit status 1
+26 error Failed at the @ postinstall script.
+26 error This is most likely a problem with the  package,
+26 error not with npm itself.
+26 error Tell the author that this fails on your system:
+26 error     bower install
+26 error You can get their info via:
+26 error     npm owner ls
+26 error There is likely additional logging output above.
+27 error System Linux 3.13.0-55-generic
+28 error command "/home/gianarb/.nvm/v0.10.35/bin/node" "/home/gianarb/.nvm/v0.10.35/bin/npm" "install"
+29 error cwd /home/gianarb/git/milestone-manager-zf
+30 error node -v v0.10.35
+31 error npm -v 1.4.28
+32 error code ELIFECYCLE
+33 verbose exit [ 1, true ]

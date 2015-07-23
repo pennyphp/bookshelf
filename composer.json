@@ -1,0 +1,16 @@
+{
+    "name": "penny/classic-app",
+    "require": {
+        "gianarb/penny": "dev-master",
+        "knplabs/github-api": "~1.4",
+        "league/plates": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ClassicApp\\": "app"
+        }
+    }
+}
