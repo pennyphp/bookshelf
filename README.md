@@ -11,7 +11,7 @@ npm install
 grunt dev
 php -S 127.0.0.1:8080 -t public
 ```
-it's ready! You can visit [127.0.0.1](https://127.0.0.1).
+it's ready! You can visit [127.0.0.1:8080](https://127.0.0.1:8080).
 
 ## Know how
 This skeleton application not resolve ALL your problems and it's not perfect, this is a starting point and implementation example.
