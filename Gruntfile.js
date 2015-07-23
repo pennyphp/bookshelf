@@ -5,7 +5,7 @@ module.exports = function ( grunt ) {
 
   var taskConfig = {
     clean: [
-      'web/vendor',
+      'public/vendor',
     ],
     copy: {
       dev_js: {
@@ -15,7 +15,7 @@ module.exports = function ( grunt ) {
              'bower_components/jquery/dist/jquery.js',
              'bower_components/bootstrap/dist/js/bootstrap.js'
             ],
-            dest: 'web/vendor/js/',
+            dest: 'public/vendor/js/',
             cwd: '.',
           }
        ]
@@ -24,7 +24,7 @@ module.exports = function ( grunt ) {
         files: [
           {
             src: [],
-            dest: 'web/vendor/assets/',
+            dest: 'public/vendor/assets/',
             cwd: '.',
           }
        ]
@@ -35,7 +35,7 @@ module.exports = function ( grunt ) {
             src: [
              'bower_components/bootstrap/dist/css/bootstrap.css'
             ],
-            dest: './web/vendor/css/',
+            dest: './public/vendor/css/',
             cwd: '.',
           }
        ]
@@ -45,9 +45,9 @@ module.exports = function ( grunt ) {
       options: {
         livereload: true
       },
-      web: {
+      public: {
         files: [
-          'web/*/**'
+          'public/*/**'
         ],
         tasks: [ 'dev' ]
       },
