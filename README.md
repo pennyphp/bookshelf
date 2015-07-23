@@ -8,6 +8,7 @@ git clone git@github.com:gianarb/penny-classic-app
 cd penny-classic-app
 composer install
 npm install
+grunt dev
 php -S 127.0.0.1:8080 -t public
 ```
 it's ready! You can visit [127.0.0.1](https://127.0.0.1).
