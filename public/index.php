@@ -4,10 +4,14 @@ require "vendor/autoload.php";
 
 $app = new \GianArb\Penny\App();
 
-$app->getContainer()->get("http.flow")->attach("ERROR_DISPATCH", function ($e) {
-    if($e->getException() instanceof \Exception) {
-        throw $e;
-    }
+$template = $app->getContainer()->get("template");
+
+$app->getContainer()->get("http.flow")->attach("ERROR_DISPATCH", function ($event) use ($template) {
+    $e = $event->getException();
+    $response = $event->getResponse()->getBody()->write($template->render("error/40x", [
+        "title" => $e->getMessage(),
+        "exception" => $e,
+    ]));
 });
 
 $emitter = new \Zend\Diactoros\Response\SapiEmitter();
