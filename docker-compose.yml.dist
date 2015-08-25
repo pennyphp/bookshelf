@@ -1,0 +1,15 @@
+nginx:
+  image: fntlnz/nginx:1.9.2
+  volumes:
+    - docker/nginx/conf:/usr/local/nginx/conf
+    - .:/var/www/penny-classic
+  ports:
+    - "127.0.0.10:80:80"
+  links:
+    - fpm:fpm
+
+fpm:
+  build: docker/dockerfiles/php
+  volumes:
+    - docker/fpm:/usr/local/php/etc
+    - .:/var/www/penny-classic

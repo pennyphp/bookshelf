@@ -3,3 +3,4 @@
 /node_modules
 /vendor
 npm_debug.log
+docker-compose.yml
