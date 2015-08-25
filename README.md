@@ -29,7 +29,12 @@ with the NGINX webserver and one with php-fpm. This file *must be renamed* into 
 if you need something specific for your system like paths, ip addresses, ports and so on. Remember that the docker-compose.yml file
 is ignored since this is very specific to the current installation.
 
-### Crate your docker-compose.yml
+### Requirements
+
+- Docker >= 1.6.0
+- [docker-compose](https://docs.docker.com/compose/)
+
+### Create your docker-compose.yml
 
 ```bash
 cp docker-compose.yml.dist docker-compose.yml
