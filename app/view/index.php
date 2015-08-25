@@ -6,7 +6,7 @@
   </div>
 
   <div class="jumbotron">
-    <h1>Panny Classic Application</h1>
+    <h1>Penny Classic Application</h1>
     <p class="lead"><a target="_blank" href"="https://gituhb.com/gianarb/penny">Penny</a> is a concentration of experience to build flexible and modern PHP application</p>
     <p><a class="btn btn-lg btn-success" target="_blank" href"="https://gituhb.com/gianarb/penny-classic-app" role="button">Try me!</a></p>
   </div>
