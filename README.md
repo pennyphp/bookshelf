@@ -62,10 +62,10 @@ Z-Ray is included in the Penny Docker development environment.
 
 ### Endpoints
 
-Ip addresses are configured in the `docker-compose.yml`
+IP addresses can be configured in `docker-compose.yml`
 
-Application:  `http://127.0.0.10`
-Z-Ray:  `http://127.0.0.10:10081/ZendServer`
+- Application:  `http://127.0.0.10`
+- Z-Ray:  `http://127.0.0.10:10081/ZendServer`
 
 ## Know how
 This skeleton application not resolve ALL your problems and it's not perfect, this is a starting point and implementation example.
