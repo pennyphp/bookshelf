@@ -2,9 +2,11 @@ nginx:
   image: fntlnz/nginx:1.9.2
   volumes:
     - docker/nginx/conf:/usr/local/nginx/conf
-    - .:/var/www/penny-classic
+  volumes_from:
+    - fpm
   ports:
     - "127.0.0.10:80:80"
+    - "127.0.0.10:10081:10081"
   links:
     - fpm:fpm
 

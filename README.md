@@ -54,7 +54,18 @@ docker-compose build
 docker-compose up -d
 ```
 
-Now you can visit `http://127.0.0.10` - this address is configured in the `docker-compose.yml`
+### Z-Ray
+
+Z-Ray is included in the Penny Docker development environment.
+
+![Z-Ray](http://i.imgur.com/MfvkfY0.png)
+
+### Endpoints
+
+IP addresses can be configured in `docker-compose.yml`
+
+- Application:  `http://127.0.0.10`
+- Z-Ray:  `http://127.0.0.10:10081/ZendServer`
 
 ## Know how
 This skeleton application not resolve ALL your problems and it's not perfect, this is a starting point and implementation example.
