@@ -15,8 +15,8 @@ class IndexController
 
     public function index($request, $response)
     {
-        $response->getBody()->write($this->template->render("index", [
-            "title" => "Home Page",
+        $response->getBody()->write($this->template->render('index', [
+            'title' => 'Home Page',
         ]));
         return $response;
     }
