@@ -4,7 +4,7 @@ This is a first [penny](https://github.com/gianarb/penny) implementation.
 
 ## Installation
 ```
-$ composer create project penny/classic-app
+$ composer create-project penny/classic-app -s dev
 $ npm install
 $ grunt dev
 ```
