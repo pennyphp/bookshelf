@@ -1,5 +1,6 @@
 {
     "name": "penny/classic-app",
+    "type": "project",
     "require": {
         "gianarb/penny": "dev-master",
         "league/plates": "dev-master"
