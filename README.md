@@ -4,17 +4,15 @@ This is a first [penny](https://github.com/gianarb/penny) implementation.
 
 ## Installation
 ```
-git clone git@github.com:gianarb/penny-classic-app
-cd penny-classic-app
-composer install
-npm install
-grunt dev
+$ composer create project penny/classic-app
+$ npm install
+$ grunt dev
 ```
 
 ## Built-in webserver
 
-```
-php -S 127.0.0.1:8080 -t public
+```bash
+$ php -S 127.0.0.1:8080 -t public
 ```
 
 it's ready! You can visit [127.0.0.1:8080](https://127.0.0.1:8080).
