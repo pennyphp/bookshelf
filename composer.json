@@ -2,6 +2,7 @@
     "name": "penny/classic-app",
     "type": "project",
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "gianarb/penny": "dev-master",
         "league/plates": "dev-master"
