@@ -1,0 +1,13 @@
+<phpunit bootstrap="vendor/autoload.php" colors="true">
+    <testsuite name="ClassicApp" >
+        <directory>./test</directory>
+    </testsuite>
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./app/</directory>
+        </whitelist>
+        <blacklist>
+            <directory suffix=".php">./../../../../vendor/</directory>
+        </blacklist>
+    </filter>
+</phpunit>
