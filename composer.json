@@ -3,8 +3,8 @@
     "type": "project",
     "minimum-stability": "dev",
     "require": {
-        "gianarb/penny": "dev-master",
-        "league/plates": "dev-master"
+        "gianarb/penny": "^0.2",
+        "league/plates": "^3.1"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.0"
