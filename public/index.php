@@ -8,7 +8,11 @@ $template = $app->getContainer()->get('template');
 
 $app->getContainer()->get('http.flow')->attach('ERROR_DISPATCH', function (\GianArb\Penny\Event\HttpFlowEvent $event) use ($template) {
     $e = $event->getException();
-    $event->getResponse()->getBody()->write($template->render("error/40x", [
+    
+    $response = $event->getResponse()->withStatus($e->getCode());
+    $event->setResponse($response);
+
+    $response->getBody()->write($template->render("error/40x", [
         'title' => $e->getMessage(),
         'exception' => $e,
     ]));
