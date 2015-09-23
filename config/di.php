@@ -13,6 +13,8 @@ return [
                 'exception' => $e,
             ]));
         });
+
+        return $eventManager;
     }),
     'template' => \DI\object(\League\Plates\Engine::class)->constructor('./app/view/'),
     'router' => function () {
