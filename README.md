@@ -9,6 +9,11 @@ $ npm install
 $ grunt dev
 ```
 
+**Note:**  
+bower and grunt require node.js this is only an example of method to manage static asset,
+if you don't have familiarity with this tools no problem, you can use [assetic](https://github.com/kriswallsmith/assetic),
+download all static deps into the public dir or other solutions.
+
 ## Built-in webserver
 
 ```bash
