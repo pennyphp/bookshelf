@@ -1,4 +1,4 @@
-FROM fntlnz/php:5.6.12
+FROM fntlnz/php:5.6.13
 
 WORKDIR /tmp
 
@@ -15,6 +15,9 @@ RUN phpize
 RUN ./configure
 RUN make -j
 RUN make install
+
+# Copy configuration
+COPY etc/ /usr/local/php/etc
 
 # php-fpm
 WORKDIR /var/www/penny-classic

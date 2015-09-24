@@ -1,7 +1,5 @@
 nginx:
-  image: fntlnz/nginx:1.9.2
-  volumes:
-    - docker/nginx/conf:/usr/local/nginx/conf
+  build: docker/development/nginx/
   volumes_from:
     - fpm
   ports:
@@ -11,7 +9,6 @@ nginx:
     - fpm:fpm
 
 fpm:
-  build: docker/dockerfiles/php
+  build: docker/development/fpm
   volumes:
-    - docker/fpm:/usr/local/php/etc
     - .:/var/www/penny-classic
