@@ -7,7 +7,7 @@
             <directory suffix=".php">./app/</directory>
         </whitelist>
         <blacklist>
-            <directory suffix=".php">./vendor/</directory>
+            <directory suffix=".php">./test/bootstrap.php</directory>
         </blacklist>
     </filter>
 </phpunit>

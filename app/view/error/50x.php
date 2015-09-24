@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ["title" => $title]) ?>
+<?php $this->layout('layout', ["title" => "Internal Server Error"]) ?>
 
 <div class="container">
   <div class="header clearfix">
@@ -6,11 +6,10 @@
   </div>
 
   <div class="row">
-    <div class="col-md-12">
-        <img src="/img/404.jpg" class="center-block img-responsive"/>
+    <div class="col-md-12 center-block">
+        <img src="/img/500.png" class="img-responsive"/>
     </div>
   </div>
-
 
   <div class="jumbotron">
     <h2><?php echo get_class($exception) ?></h2>
