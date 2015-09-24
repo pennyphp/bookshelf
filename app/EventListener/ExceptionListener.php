@@ -1,7 +1,7 @@
 <?php
 namespace ClassicApp\EventListener;
 
-class PageNotFound
+class ExceptionListener
 {
     private $template;
 
@@ -17,7 +17,7 @@ class PageNotFound
         $response = $event->getResponse()->withStatus($e->getCode());
         $event->setResponse($response);
 
-        $response->getBody()->write($this->template->render("error/40x", [
+        $response->getBody()->write($this->template->render("error/50x", [
             'title' => $e->getMessage(),
             'exception' => $e,
         ]));
