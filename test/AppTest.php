@@ -1,6 +1,7 @@
 <?php
 namespace ClassicAppTest;
 
+use Prophecy\Argument;
 use PHPUnit_Framework_TestCase;
 use ClassicApp\EventListener\DispatcherExceptionListener;
 use GianArb\Penny\App;
@@ -13,22 +14,19 @@ class AppTest extends PHPUnit_Framework_TestCase
 {
     public function testDispatcherErrorCallsListenerIndex()
     {
-        $spy = $this->getMockBuilder(DispatcherExceptionListener::class)
-            ->disableOriginalConstructor()
-            ->getMock();
-        $spy->expects($this->once())
-            ->method('onError')
-            ->with($this->anything());
+        $dispatcherExceptionListener = $this->prophesize(DispatcherExceptionListener::class);
 
-        $response = $this->getMock(Response::class);
+        $response = $this->prophesize(Response::class);
         $request = (new Request())
             ->withUri(new Uri('/pnf'))
             ->withMethod('GET');
 
         $container = App::buildContainer(Loader::load());
-        $container->set(DispatcherExceptionListener::class, $spy);
+        $container->set(DispatcherExceptionListener::class, $dispatcherExceptionListener->reveal());
 
         $app = new App(null, $container);
-        $app->run($request, $response);
+        $app->run($request, $response->reveal());
+
+        $dispatcherExceptionListener->onError(Argument::any())->shouldHaveBeenCalled();
     }
 }
