@@ -40,7 +40,7 @@ is ignored since this is very specific to the current installation.
 ### Create your docker-compose.yml
 
 ```bash
-$ cp docker-compose.yml.dist docker-compose.yml
+$ cp docker/docker-compose.yml.development docker-compose.yml
 # edit it for your specific needs
 $ vi docker-compose.yml 
 ```
