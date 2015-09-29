@@ -1,8 +1,12 @@
 <?php
+
+use GianArb\Penny\App;
+use Zend\Diactoros\Response\SapiEmitter;
+
 chdir(dirname(__DIR__));
 require 'vendor/autoload.php';
 
-$app = new \GianArb\Penny\App();
+$app = new App();
 
-$emitter = new \Zend\Diactoros\Response\SapiEmitter();
+$emitter = new SapiEmitter();
 $emitter->emit($app->run());
