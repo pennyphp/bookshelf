@@ -1,4 +1,6 @@
 # Penny Classic Application
+[![Build Status](https://travis-ci.org/pennyphp/penny-classic-app.svg)](https://travis-ci.org/pennyphp/penny-classic-app)  
+
 This is a first [penny](https://github.com/gianarb/penny) implementation.
 "Classic" because it integrates [league/plates](https://github.com/thephpleague/plates) and help you to build an HTML application.
 
