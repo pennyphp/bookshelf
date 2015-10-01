@@ -1,4 +1,4 @@
-FROM fntlnz/php:5.6.13
+FROM fntlnz/php:5.6.14
 
 WORKDIR /tmp
 
