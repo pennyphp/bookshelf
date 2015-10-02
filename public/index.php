@@ -1,6 +1,6 @@
 <?php
 
-use GianArb\Penny\App;
+use Penny\App;
 use Zend\Diactoros\Response\SapiEmitter;
 
 chdir(dirname(__DIR__));

@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="header clearfix">
-    <h3 class="text-muted"><a href="https://github.com/gianarb/penny-classic-app">Penny Classic Application</a></h3>
+    <h3 class="text-muted"><a href="https://github.com/pennyphp/penny-classic-app">Penny Classic Application</a></h3>
   </div>
 
   <div class="row">
