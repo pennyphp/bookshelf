@@ -5,6 +5,7 @@ use Prophecy\Argument;
 use PHPUnit_Framework_TestCase;
 use ClassicApp\EventListener\DispatcherExceptionListener;
 use Penny\App;
+use Penny\Container;
 use Penny\Config\Loader;
 use Zend\Diactoros\Request;
 use Zend\Diactoros\Response;
@@ -21,10 +22,10 @@ class AppTest extends PHPUnit_Framework_TestCase
             ->withUri(new Uri('/pnf'))
             ->withMethod('GET');
 
-        $container = App::buildContainer(Loader::load());
+        $container = Container\PHPDiFactory::buildContainer(Loader::load());
         $container->set(DispatcherExceptionListener::class, $dispatcherExceptionListener->reveal());
 
-        $app = new App(null, $container);
+        $app = new App($container);
         $app->run($request, $response->reveal());
 
         $dispatcherExceptionListener->onError(Argument::any())->shouldHaveBeenCalled();
