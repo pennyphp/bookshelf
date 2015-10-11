@@ -1,4 +1,4 @@
-# Penny Classic Application Demo - Bookshelf
+# Penny Classic Bookshelf
 
 This penny demo application is using the following components:
 
@@ -7,6 +7,12 @@ This penny demo application is using the following components:
 - symfony/http-foundation
 - twig/twig
 
+
+## Production
+
+### Edit your configurations
+There are a couple of things you may want to configure like doctrine cache, twig cache and so on.
+You can find them under the `config/` folder.
 
 ## Development
 
