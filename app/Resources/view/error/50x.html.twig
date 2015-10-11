@@ -9,8 +9,12 @@
         </div>
 
         <div class="jumbotron">
-            <h2>{{ exception_class }}</h2>
-            <pre>{{ trace }}</pre>
+            {% if show_exception_backtrace %}
+                <h2>{{ exception_class }}</h2>
+                <pre>{{ trace }}</pre>
+            {% else %}
+                <h2>An error occurred</h2>
+            {% endif %}
         </div>
 
     </div>

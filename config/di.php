@@ -31,6 +31,7 @@ return [
 
         $twig = new Twig_Environment($loader, $c->get('parameters')['twig']['loader_options']);
 
+        $twig->addGlobal('show_exception_backtrace', $c->get('parameters')['twig']['show_exception_backtrace']);
         $twig->addGlobal('session', $c->get('session'));
         $formEngine = new \Symfony\Bridge\Twig\Form\TwigRendererEngine(
             [
