@@ -1,5 +1,7 @@
 # Penny Classic Bookshelf
 
+This demo is based on the [penny-classic-app](https://github.com/pennyphp/penny-classic-app)
+
 This penny demo application is using the following components:
 
 - doctrine/orm
@@ -15,6 +17,24 @@ There are a couple of things you may want to configure like doctrine cache, twig
 You can find them under the `config/` folder.
 
 ## Development
+
+### Dependencies
+
+**Frontend**
+
+```
+npm install
+grunt dev
+```
+
+**Composer**
+```
+composer install
+```
+
+### Docker environment setup
+
+For more information please refer to: https://github.com/pennyphp/penny-classic-app#docker-nginxphp-fpm
 
 ```
 cp docker/development/docker-compose.yml.development docker-compose.yml
