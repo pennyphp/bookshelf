@@ -14,12 +14,13 @@ class ExceptionListener
     {
         $e = $event->getException();
 
-        $response = $event->getResponse()->withStatus($e->getCode());
-        $event->setResponse($response);
+        /* @var \Symfony\Component\HttpFoundation\Response $response */
+        $response = $event->getResponse();
 
-        $response->getBody()->write($this->template->render("error/50x.html.twig", [
+        $event->setResponse($response->create($this->template->render('error/50x.html.twig', [
             'title' => $e->getMessage(),
-            'exception' => $e,
-        ]));
+            'exception_class' => get_class($e),
+            'trace' => $e->getTraceAsString()
+        ]), 500));
     }
 }

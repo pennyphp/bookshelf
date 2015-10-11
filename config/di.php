@@ -2,7 +2,7 @@
 return [
     'event_manager' => \DI\decorate(function ($eventManager, $container) {
         $eventManager->attach('ERROR_DISPATCH', [$container->get(\ClassicApp\EventListener\DispatcherExceptionListener::class), 'onError']);
-        $eventManager->attach('*_error', [$container->get(\ClassicApp\EventListener\ExceptionListener::class), 'onError']);
+        $eventManager->attach('bookcontroller.index_error', [$container->get(\ClassicApp\EventListener\ExceptionListener::class), 'onError']);
         return $eventManager;
     }),
     \ClassicApp\EventListener\ExceptionListener::class => \DI\object(\ClassicApp\EventListener\ExceptionListener::class)
