@@ -3,8 +3,8 @@ nginx:
   volumes_from:
     - fpm
   ports:
-    - "127.0.0.10:80:80"
-    - "127.0.0.10:10081:10081"
+    - "80:80"
+    - "10081:10081"
   links:
     - fpm:fpm
 
@@ -12,3 +12,10 @@ fpm:
   build: docker/development/fpm
   volumes:
     - .:/var/www/penny-classic
+  links:
+    - mysql:mysql
+
+mysql:
+  image: mysql:5.7
+  environment:
+    MYSQL_ROOT_PASSWORD: mysupersecretrootpassword

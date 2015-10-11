@@ -17,7 +17,7 @@ class ExceptionListener
         $response = $event->getResponse()->withStatus($e->getCode());
         $event->setResponse($response);
 
-        $response->getBody()->write($this->template->render("error/50x", [
+        $response->getBody()->write($this->template->render("error/50x.html.twig", [
             'title' => $e->getMessage(),
             'exception' => $e,
         ]));

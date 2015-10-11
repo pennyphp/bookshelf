@@ -1,0 +1,17 @@
+<?php
+return [
+    'parameters' => [
+        'doctrine' => [
+            'orm' => [
+                'devMode' => false,
+                ],
+            'conn' => [
+                'driver' => 'pdo_mysql',
+                'dbname' => 'demoapp',
+                'user' => 'root',
+                'password' => 'mysupersecretrootpassword',
+                'host' => 'mysql',
+            ]
+        ]
+    ],
+];

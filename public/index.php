@@ -8,5 +8,6 @@ require 'vendor/autoload.php';
 
 $app = new App();
 
-$emitter = new SapiEmitter();
-$emitter->emit($app->run());
+$request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
+$response = new \Symfony\Component\HttpFoundation\Response();
+$app->run($request, $response)->send();

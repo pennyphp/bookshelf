@@ -1,0 +1,28 @@
+{% extends "layout.html.twig" %}
+{% block content %}
+    <div class="container">
+        <h2 class="pull-left">Books</h2>
+
+        <div class="pull-right">
+            <div class="btn-group">
+                <a class="btn" href="/book/new">New</a>
+            </div>
+        </div>
+
+        <table class="table table-condensed">
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>ISBN</th>
+            </tr>
+            {% for book in books %}
+                <tr>
+                    <td>{{ book.id }}</td>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.isbn }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}

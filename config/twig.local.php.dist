@@ -1,0 +1,10 @@
+<?php
+return [
+    'parameters' => [
+        'twig' => [
+            'loader_options' => [
+                'cache' => './data/cache/twig', // false to disable
+            ]
+        ]
+    ],
+];

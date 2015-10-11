@@ -1,6 +1,8 @@
 <?php
 namespace ClassicApp\Controller;
 
+use DI\Annotation\Inject;
+
 class IndexController
 {
     /**
@@ -15,9 +17,8 @@ class IndexController
 
     public function index($request, $response)
     {
-        $response->getBody()->write($this->template->render('index', [
-            'title' => 'Home Page',
+        return $response->create($this->template->render('index.html.twig', [
+            'title' => 'Home Page'
         ]));
-        return $response;
     }
 }

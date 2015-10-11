@@ -17,7 +17,7 @@ class DispatcherExceptionListener
         $response = $event->getResponse()->withStatus($e->getCode());
         $event->setResponse($response);
 
-        $response->getBody()->write($this->template->render("error/40x", [
+        $response->getBody()->write($this->template->render("error/40x.html.twig", [
             'title' => $e->getMessage(),
             'exception' => $e,
         ]));
