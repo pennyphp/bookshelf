@@ -14,8 +14,13 @@ fpm:
     - .:/var/www/penny-classic
   links:
     - mysql:mysql
+    - redis:redis
 
 mysql:
   image: mysql:5.7
   environment:
     MYSQL_ROOT_PASSWORD: mysupersecretrootpassword
+
+redis:
+  image: redis
+
