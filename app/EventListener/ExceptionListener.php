@@ -12,6 +12,15 @@ class ExceptionListener
 
     public function onError($event)
     {
+        $eventName =  $event->getName();
+
+        $matches = [];
+        preg_match('/\w+\.\w+\_error/', $eventName, $matches);
+
+        if (!$matches) {
+            return;
+        }
+
         $e = $event->getException();
 
         /* @var \Symfony\Component\HttpFoundation\Response $response */
