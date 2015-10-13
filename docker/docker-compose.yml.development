@@ -1,17 +1,20 @@
 nginx:
-  build: docker/development/nginx/
+  build: docker/development/nginx
   volumes_from:
     - fpm
   ports:
     - "80:80"
     - "10081:10081"
+  volumes:
+    - ./docker/development/nginx/conf:/usr/local/nginx/conf
   links:
     - fpm:fpm
 
 fpm:
   build: docker/development/fpm
   volumes:
-    - .:/var/www/penny-classic
+    - .:/var/www/bookshelf
+    - ./docker/development/fpm/etc:/usr/local/php/etc
   links:
     - mysql:mysql
     - redis:redis
@@ -23,4 +26,3 @@ mysql:
 
 redis:
   image: redis
-

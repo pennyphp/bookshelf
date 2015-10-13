@@ -1,0 +1,82 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "volumes": [
+    {
+      "name": "bookshelf",
+      "host": {
+        "sourcePath": "/var/app/current"
+      }
+    },
+    {
+      "name": "fpmconf",
+      "host": {
+        "sourcePath": "/var/app/current/docker/production/fpm/etc"
+      }
+    },
+    {
+      "name": "nginxconf",
+      "host": {
+        "sourcePath": "/var/app/current/docker/production/nginx/conf"
+      }
+    }
+  ],
+  "containerDefinitions": [
+    {
+      "name": "bookshelf-php",
+      "image": "fntlnz/bookshelf-php:5.6.14",
+      "environment": [
+        {
+          "name": "Container",
+          "value": "php-fpm"
+        }
+      ],
+      "essential": true,
+      "memory": 128,
+      "mountPoints": [
+        {
+          "sourceVolume": "bookshelf",
+          "containerPath": "/var/www/bookshelf",
+          "readOnly": true
+        },
+        {
+          "sourceVolume": "fpmconf",
+          "containerPath": "/usr/local/php/etc",
+          "readOnly": true
+        }
+      ]
+    },
+    {
+      "name": "bookshelf-nginx",
+      "image": "fntlnz/nginx:1.9.2",
+      "environment": [
+        {
+          "name": "Container",
+          "value": "nginx"
+        }
+      ],
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": [
+        "bookshelf-php"
+      ],
+      "essential": true,
+      "memory": 128,
+      "mountPoints": [
+        {
+          "sourceVolume": "bookshelf",
+          "containerPath": "/var/www/bookshelf",
+          "readOnly": true
+        },
+        {
+          "sourceVolume": "nginxconf",
+          "containerPath": "/usr/local/nginx/conf",
+          "readOnly": true
+        }
+      ]
+    }
+  ]
+}

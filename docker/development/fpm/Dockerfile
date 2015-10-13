@@ -27,11 +27,8 @@ RUN ./configure
 RUN make -j
 RUN make install
 
-# Copy configuration
-COPY etc/ /usr/local/php/etc
-
 # php-fpm
-WORKDIR /var/www/penny-classic
+WORKDIR /var/www
 
 RUN useradd fpm
 RUN chown -R fpm /opt/zray
