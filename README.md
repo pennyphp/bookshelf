@@ -10,13 +10,13 @@ This penny demo application is using the following components:
 - twig/twig
 
 
-## Production
-
-Write this section
-
 ### Edit your configurations
 There are a couple of things you may want to configure like doctrine cache, twig cache and so on.
 You can find them under the `config/` folder.
+
+## Production
+
+Write down this section
 
 ## Development
 
