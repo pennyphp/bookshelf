@@ -2,9 +2,9 @@
 return [
     'parameters' => [
         'twig' => [
-            'show_exception_backtrace' => true,
+            'show_exception_backtrace' => false,
             'loader_options' => [
-                'cache' => false,
+                'cache' => './data/cache/twig'
             ]
         ]
     ],

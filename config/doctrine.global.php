@@ -9,10 +9,10 @@ return [
             ],
             'conn' => [
                 'driver' => 'pdo_mysql',
-                'dbname' => $_SERVER['MYSQL_DATABASE'],
-                'user' => $_SERVER['MYSQL_USERNAME'],
-                'password' => $_SERVER['MYSQL_PASSWORD'],
-                'host' => $_SERVER['MYSQL_HOST'],
+                'dbname' => isset($_SERVER['MYSQL_DATABASE']) ? $_SERVER['MYSQL_DATABASE'] : null,
+                'user' => isset($_SERVER['MYSQL_USERNAME']) ? $_SERVER['MYSQL_USERNAME'] : null,
+                'password' => isset($_SERVER['MYSQL_PASSWORD']) ? $_SERVER['MYSQL_PASSWORD'] : null ,
+                'host' => isset($_SERVER['MYSQL_HOST']) ? $_SERVER['MYSQL_HOST'] : null,
             ]
         ]
     ],

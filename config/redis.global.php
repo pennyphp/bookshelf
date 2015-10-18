@@ -2,8 +2,8 @@
 return [
     'parameters' => [
         'redis' => [
-            'host' => $_SERVER['REDIS_HOST'],
-            'port' => $_SERVER['REDIS_PORT']
+            'host' => isset($_SERVER['REDIS_HOST']) ? $_SERVER['REDIS_HOST'] : null,
+            'port' => isset($_SERVER['REDIS_PORT']) ? $_SERVER['REDIS_PORT'] : null
         ]
     ],
 ];
