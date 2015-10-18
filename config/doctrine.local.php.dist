@@ -3,8 +3,8 @@ return [
     'parameters' => [
         'doctrine' => [
             'orm' => [
-                'devMode' => false,
-                ],
+                'devMode' => true,
+            ],
             'conn' => [
                 'driver' => 'pdo_mysql',
                 'dbname' => 'demoapp',

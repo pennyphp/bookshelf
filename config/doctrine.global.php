@@ -3,16 +3,16 @@ return [
     'parameters' => [
         'doctrine' => [
             'orm' => [
-                'devMode' => true,
+                'devMode' => false,
                 'entityPaths' => [__DIR__ . '/../app/Entity'],
                 'proxyDir' => './data/cache/doctrine'
             ],
             'conn' => [
                 'driver' => 'pdo_mysql',
-                'dbname' => 'demoapp',
-                'user' => 'root',
-                'password' => 'mysupersecretrootpassword',
-                'host' => 'mysql',
+                'dbname' => $_SERVER['MYSQL_DATABASE'],
+                'user' => $_SERVER['MYSQL_USERNAME'],
+                'password' => $_SERVER['MYSQL_PASSWORD'],
+                'host' => $_SERVER['MYSQL_HOST'],
             ]
         ]
     ],

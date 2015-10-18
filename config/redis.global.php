@@ -2,8 +2,8 @@
 return [
     'parameters' => [
         'redis' => [
-            'host' => 'redis',
-            'port' => 6379
+            'host' => $_SERVER['REDIS_HOST'],
+            'port' => $_SERVER['REDIS_PORT']
         ]
     ],
 ];

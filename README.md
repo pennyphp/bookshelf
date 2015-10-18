@@ -1,4 +1,4 @@
-# Penny Classic Bookshelf
+# Bookshelf
 
 This demo is based on the [penny-classic-app](https://github.com/pennyphp/penny-classic-app)
 
@@ -11,6 +11,8 @@ This penny demo application is using the following components:
 
 
 ## Production
+
+Write this section
 
 ### Edit your configurations
 There are a couple of things you may want to configure like doctrine cache, twig cache and so on.

@@ -1,9 +1,8 @@
 FROM fntlnz/php:5.6.14
 
-WORKDIR /tmp
+RUN yum install git -y
 
 # Additional extensions
-
 WORKDIR /tmp
 
 # Redis
@@ -20,8 +19,5 @@ WORKDIR /var/www
 RUN useradd fpm
 
 VOLUME ["/usr/local/php/etc"]
-#ENTRYPOINT ["/usr/local/php/sbin/php-fpm"]
-#CMD ["-F"]
-
-ENTRYPOINT ["ls"]
-CMD ["/usr/local/php/etc"]
+ENTRYPOINT ["/usr/local/php/sbin/php-fpm"]
+CMD ["-F"]
