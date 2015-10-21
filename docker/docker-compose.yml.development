@@ -1,5 +1,5 @@
 nginx:
-  build: docker/development/nginx
+  image: fntlnz/nginx:1.9.5
   volumes_from:
     - fpm
   ports:
