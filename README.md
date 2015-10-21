@@ -47,8 +47,8 @@ docker-compose up -d
 ### Prepare database
 
 ```
-docker exec -ti pennyclassicapp_mysql_1 mysql -pmysupersecretrootpassword -e 'create database demoapp'
-docker exec -ti  pennyclassicapp_fpm_1 bash -c 'cd bookshelf; vendor/bin/doctrine orm:schema-tool:create'
+docker exec -ti bookshelf_mysql_1 mysql -pmysupersecretrootpassword -e 'create database demoapp'
+docker exec -ti  bookshelf_fpm_1 bash -c 'cd bookshelf; vendor/bin/doctrine orm:schema-tool:create'
 ```
 
 ### Screenshot
