@@ -21,12 +21,12 @@ class BookControllerTest extends PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-
+        $this->controller = new BookController();
     }
 
     public function testIndex()
     {
-        $controller = new BookController();
+        $this->controller = new BookController();
 
         $request  = $this->prophesize(Request::class);
         $response = new Response();
@@ -45,19 +45,19 @@ class BookControllerTest extends PHPUnit_Framework_TestCase
             'books' => $books
         ])->willReturn($returnRender);
 
-        $r = new ReflectionProperty($controller, 'template');
+        $r = new ReflectionProperty($this->controller, 'template');
         $r->setAccessible(true);
-        $r->setValue($controller, $template->reveal());
+        $r->setValue($this->controller, $template->reveal());
 
-        $r = new ReflectionProperty($controller, 'em');
+        $r = new ReflectionProperty($this->controller, 'em');
         $r->setAccessible(true);
-        $r->setValue($controller, $em->reveal());
+        $r->setValue($this->controller, $em->reveal());
 
-        $r = new ReflectionProperty($controller, 'session');
+        $r = new ReflectionProperty($this->controller, 'session');
         $r->setAccessible(true);
-        $r->setValue($controller, $session->reveal());
+        $r->setValue($this->controller, $session->reveal());
 
-        $result = $controller->index($request->reveal(), $response);
+        $result = $this->controller->index($request->reveal(), $response);
         $this->assertContains('Books', $result->getContent());
     }
 }
