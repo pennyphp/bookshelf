@@ -1,16 +1,16 @@
 <?php
 return [
     'event_manager' => \DI\decorate(function ($eventManager, $container) {
-        $eventManager->attach('ERROR_DISPATCH', [$container->get(\ClassicApp\EventListener\DispatcherExceptionListener::class), 'onError']);
-        $eventManager->attach('*', [$container->get(\ClassicApp\EventListener\ExceptionListener::class), 'onError']);
+        $eventManager->attach('ERROR_DISPATCH', [$container->get(\App\EventListener\DispatcherExceptionListener::class), 'onError']);
+        $eventManager->attach('*', [$container->get(\App\EventListener\ExceptionListener::class), 'onError']);
         return $eventManager;
     }),
-    \ClassicApp\EventListener\ExceptionListener::class => \DI\object(\ClassicApp\EventListener\ExceptionListener::class)
+    \App\EventListener\ExceptionListener::class => \DI\object(\App\EventListener\ExceptionListener::class)
         ->constructor(\DI\get('template')),
-    \ClassicApp\EventListener\DispatcherExceptionListener::class => \DI\object(\ClassicApp\EventListener\DispatcherExceptionListener::class)
+    \App\EventListener\DispatcherExceptionListener::class => \DI\object(\App\EventListener\DispatcherExceptionListener::class)
         ->constructor(\DI\get('template')),
     'dispatcher' => \DI\factory(function (\DI\Container $c) {
-        $dispatcher = new \ClassicApp\Dispatcher\SymfonyDispatcher($c->get('router'));
+        $dispatcher = new \App\Dispatcher\SymfonyDispatcher($c->get('router'));
         return $dispatcher;
     }),
     'session' => \DI\factory(function (\DI\Container $c) {
@@ -49,10 +49,10 @@ return [
     }),
     'router' => function () {
         return \FastRoute\simpleDispatcher(function (\FastRoute\RouteCollector $r) {
-            $r->addRoute('GET', '/', ['ClassicApp\Controller\IndexController', 'index']);
-            $r->addRoute('GET', '/book', ['ClassicApp\Controller\BookController', 'index']);
-            $r->addRoute('GET', '/book/new', ['ClassicApp\Controller\BookController', 'create']);
-            $r->addRoute('POST', '/book/new', ['ClassicApp\Controller\BookController', 'create']);
+            $r->addRoute('GET', '/', ['App\Controller\IndexController', 'index']);
+            $r->addRoute('GET', '/book', ['App\Controller\BookController', 'index']);
+            $r->addRoute('GET', '/book/new', ['App\Controller\BookController', 'create']);
+            $r->addRoute('POST', '/book/new', ['App\Controller\BookController', 'create']);
         });
     },
     'redis' => \DI\factory(function(\DI\Container $c) {

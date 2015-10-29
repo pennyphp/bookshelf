@@ -1,11 +1,11 @@
 <?php
 
-namespace ClassicAppTest\Controller;
+namespace AppTest\Controller;
 
 use PHPUnit_Framework_TestCase;
-use ClassicApp\Controller\BookController;
-use ClassicApp\Entity\Book;
-use ClassicApp\Repository\BookRepository;
+use App\Controller\BookController;
+use App\Entity\Book;
+use App\Repository\BookRepository;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Pagination\Paginator;
 use ReflectionProperty;

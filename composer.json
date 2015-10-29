@@ -15,12 +15,12 @@
     },
     "autoload": {
         "psr-4": {
-            "ClassicApp\\": "app"
+            "App\\": "app"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ClassicAppTest\\": "test"
+            "AppTest\\": "test"
         }
     }
 }

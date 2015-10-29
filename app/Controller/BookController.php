@@ -1,8 +1,8 @@
 <?php
-namespace ClassicApp\Controller;
+namespace App\Controller;
 
-use ClassicApp\Form\Type\BookType;
-use ClassicApp\Repository\BookRepository;
+use App\Form\Type\BookType;
+use App\Repository\BookRepository;
 use DI\Annotation\Inject;
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\Form\Forms;
@@ -31,7 +31,7 @@ class BookController
     public function index($request, $response)
     {
         /* @var $bookRepository BookRepository */
-        $bookRepository = $this->em->getRepository('ClassicApp\Entity\Book');
+        $bookRepository = $this->em->getRepository('App\Entity\Book');
         $books = $bookRepository->getPaginator();
 
         return $response->create($this->template->render('book/index.html.twig', [

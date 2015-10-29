@@ -1,6 +1,6 @@
 <?php
 
-namespace ClassicApp\Entity;
+namespace App\Entity;
 
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Entity;
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\ORM\Mapping\Id;
 
 /**
- * @Entity(repositoryClass="ClassicApp\Repository\BookRepository")
+ * @Entity(repositoryClass="App\Repository\BookRepository")
  */
 class Book
 {
