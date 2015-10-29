@@ -1,6 +1,6 @@
 <?php
 
-namespace ClassicApp\Form\Type;
+namespace App\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -20,7 +20,7 @@ class BookType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => 'ClassicApp\Entity\Book'
+            'data_class' => 'App\Entity\Book'
         ]);
     }
 

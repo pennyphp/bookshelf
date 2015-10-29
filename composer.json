@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ClassicApp\\": "app"
+            "App\\": "app"
         }
     },
     "autoload-dev": {

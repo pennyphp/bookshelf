@@ -1,5 +1,5 @@
 <?php
-namespace ClassicApp\EventListener;
+namespace App\EventListener;
 
 class DispatcherExceptionListener
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace ClassicApp\Dispatcher;
+namespace App\Dispatcher;
 
 use Penny\Exception\MethodNotAllowed;
 use Penny\Exception\RouteNotFound;

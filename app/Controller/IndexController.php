@@ -1,5 +1,5 @@
 <?php
-namespace ClassicApp\Controller;
+namespace App\Controller;
 
 use DI\Annotation\Inject;
 
