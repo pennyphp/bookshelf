@@ -1,5 +1,7 @@
 # Bookshelf
 
+[![Build Status](https://travis-ci.org/pennyphp/bookshelf.svg)](https://travis-ci.org/pennyphp/bookshelf)
+
 This demo is based on the [penny-classic-app](https://github.com/pennyphp/penny-classic-app)
 
 This penny demo application is using the following components:
