@@ -16,4 +16,7 @@ install:
 
 script:
   - vendor/bin/phpunit
+  
+notifications:
+  email: false
 
