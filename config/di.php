@@ -10,7 +10,7 @@ return [
     \App\EventListener\DispatcherExceptionListener::class => \DI\object(\App\EventListener\DispatcherExceptionListener::class)
         ->constructor(\DI\get('template')),
     'dispatcher' => \DI\factory(function (\DI\Container $c) {
-        $dispatcher = new \App\Dispatcher\SymfonyDispatcher($c->get('router'));
+        $dispatcher = new \App\Dispatcher\SymfonyDispatcher($c->get('router'), $c);
         return $dispatcher;
     }),
     'session' => \DI\factory(function (\DI\Container $c) {
