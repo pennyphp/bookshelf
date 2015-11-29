@@ -3,23 +3,17 @@
 namespace App\Dispatcher;
 
 use FastRoute\Dispatcher;
+use Penny\Dispatcher as BaseDispatcher;
 use Penny\Exception\MethodNotAllowedException;
 use Penny\Exception\RouteNotFoundException;
 use Penny\Route\RouteInfo;
-use Symfony\Component\HttpFoundation\Request;
 
-class SymfonyDispatcher
+class SymfonyDispatcher extends BaseDispatcher
 {
-    private $router;
-    private $container;
-
-    public function __construct($router, $container)
-    {
-        $this->router = $router;
-        $this->container = $container;
-    }
-
-    public function __invoke(Request $request)
+    /**
+     *  @param mixed $request
+     */
+    public function __invoke($request)
     {
         $routeInfo = $this->router->dispatch($request->getMethod(), $request->getPathInfo());
         switch ($routeInfo[0]) {
